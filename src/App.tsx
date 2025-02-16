@@ -10,6 +10,7 @@ import Events from "./pages/Events";
 import Interior from "./pages/Interior";
 import Drone from "./pages/Drone";
 import FPV from "./pages/FPV";
+import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/interior" element={<Interior />} />
           <Route path="/drone" element={<Drone />} />
           <Route path="/fpv" element={<FPV />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
