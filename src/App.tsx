@@ -1,9 +1,15 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
+import VirtualTours from "./pages/VirtualTours";
+import Events from "./pages/Events";
+import Interior from "./pages/Interior";
+import Drone from "./pages/Drone";
+import FPV from "./pages/FPV";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -16,7 +22,11 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/virtual-tours" element={<VirtualTours />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/interior" element={<Interior />} />
+          <Route path="/drone" element={<Drone />} />
+          <Route path="/fpv" element={<FPV />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
