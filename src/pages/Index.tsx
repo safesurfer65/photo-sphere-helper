@@ -1,5 +1,5 @@
 
-import { Camera, Video, Drone, Image360, Building2 } from 'lucide-react';
+import { Camera, Video, Building2 } from 'lucide-react';
 import ServiceCard from '../components/ServiceCard';
 import Navigation from '../components/Navigation';
 
@@ -7,7 +7,7 @@ const services = [
   {
     title: "360° Virtual Tours",
     description: "Immersive virtual experiences for real estate and businesses",
-    icon: Image360,
+    icon: Camera,
     path: "/virtual-tours",
     imageUrl: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2053&auto=format&fit=crop"
   },
@@ -28,7 +28,7 @@ const services = [
   {
     title: "Drone Photography",
     description: "Aerial perspectives that amaze",
-    icon: Drone,
+    icon: Camera,
     path: "/drone",
     imageUrl: "https://images.unsplash.com/photo-1508614589041-895b88991e3e?q=80&w=2012&auto=format&fit=crop"
   },

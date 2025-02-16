@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Camera, Video, Home, Drone, Image360, Building2 } from 'lucide-react';
+import { Camera, Video, Home, Building2 } from 'lucide-react';
 
 const Navigation = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -18,10 +18,10 @@ const Navigation = () => {
 
   const navItems = [
     { path: '/', label: 'Home', icon: Home },
-    { path: '/virtual-tours', label: '360° Tours', icon: Image360 },
+    { path: '/virtual-tours', label: '360° Tours', icon: Camera },
     { path: '/events', label: 'Events', icon: Camera },
     { path: '/interior', label: 'Interior', icon: Building2 },
-    { path: '/drone', label: 'Drone', icon: Drone },
+    { path: '/drone', label: 'Drone', icon: Camera },
     { path: '/fpv', label: 'FPV', icon: Video },
   ];
 

@@ -2,7 +2,7 @@
 import Navigation from '../components/Navigation';
 import { Camera } from 'lucide-react';
 
-const VirtualTours = () => {
+const Events = () => {
   return (
     <div className="min-h-screen page-transition">
       <Navigation />
@@ -12,10 +12,10 @@ const VirtualTours = () => {
         <div className="container mx-auto">
           <div className="flex items-center justify-center space-x-3 mb-6">
             <Camera className="w-8 h-8" />
-            <h1 className="text-3xl font-bold">360° Virtual Tours</h1>
+            <h1 className="text-3xl font-bold">Event Photography</h1>
           </div>
           <p className="text-center text-lg text-muted-foreground max-w-2xl mx-auto">
-            Experience spaces like never before with our immersive virtual tours. Perfect for real estate, businesses, and event venues.
+            Capturing your special moments with professional photography services for all types of events.
           </p>
         </div>
       </section>
@@ -23,4 +23,4 @@ const VirtualTours = () => {
   );
 };
 
-export default VirtualTours;
+export default Events;
