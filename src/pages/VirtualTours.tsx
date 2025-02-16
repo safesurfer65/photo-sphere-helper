@@ -12,15 +12,15 @@ const VirtualTours = () => {
         <div className="container mx-auto">
           <div className="flex items-center justify-center space-x-3 mb-6">
             <Image360 className="w-8 h-8" />
-            <h1 className="text-
+            <h1 className="text-3xl font-bold">360° Virtual Tours</h1>
+          </div>
+          <p className="text-center text-lg text-muted-foreground max-w-2xl mx-auto">
+            Experience spaces like never before with our immersive virtual tours. Perfect for real estate, businesses, and event venues.
+          </p>
+        </div>
+      </section>
+    </div>
+  );
+};
 
-If there's knowledge, context or custom instructions you want to include in every edit in this project, set it below.
-
-<lov-actions>
-<lov-knowledge>
-</lov-actions>
-
-If your project requires backend functionality, such as a contact form or a gallery to display your photography, you can use the Supabase menu on the top right to connect your project to Supabase.
-<lov-actions>
-<lov-message-prompt message="Tell me more about Supabase">Learn more about Supabase</lov-message-prompt>
-</lov-actions>
+export default VirtualTours;
