@@ -48,7 +48,7 @@ const Navigation = () => {
             <img 
               src="/lovable-uploads/3cffc790-0011-4db9-839e-c0fc286f247a.png" 
               alt="Mark Purmal Photography"
-              className="h-12 w-auto"
+              className="h-24 w-auto"
             />
           </Link>
           <div className="hidden md:flex space-x-8">
