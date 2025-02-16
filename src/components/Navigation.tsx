@@ -44,8 +44,12 @@ const Navigation = () => {
   return <nav className={`fixed top-0 left-0 right-0 z-50 transition-all-300 ${scrolled ? 'glass-effect py-4' : 'bg-transparent py-6'}`}>
       <div className="container mx-auto">
         <div className="flex items-center justify-between">
-          <Link to="/" className="text-2xl font-semibold">
-            PhotoStudio
+          <Link to="/" className="flex-shrink-0">
+            <img 
+              src="/lovable-uploads/3cffc790-0011-4db9-839e-c0fc286f247a.png" 
+              alt="Mark Purmal Photography"
+              className="h-12 w-auto"
+            />
           </Link>
           <div className="hidden md:flex space-x-8">
             {navItems.map(item => <Link key={item.path} to={item.path} className={`flex items-center space-x-2 transition-all-300 hover:text-primary ${location.pathname === item.path ? 'text-primary font-medium' : 'text-muted-foreground'}`}>
