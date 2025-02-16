@@ -2,6 +2,14 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Camera, Video, Home, Building2 } from 'lucide-react';
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
 
 const Navigation = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -15,11 +23,7 @@ const Navigation = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navItems = [{
-    path: '/',
-    label: 'Home',
-    icon: Home
-  }, {
+  const serviceItems = [{
     path: '/virtual-tours',
     label: '360° Tours',
     icon: Camera
@@ -51,11 +55,45 @@ const Navigation = () => {
               className="h-24 w-auto"
             />
           </Link>
-          <div className="hidden md:flex space-x-8">
-            {navItems.map(item => <Link key={item.path} to={item.path} className={`flex items-center space-x-2 transition-all-300 hover:text-primary ${location.pathname === item.path ? 'text-primary font-medium' : 'text-muted-foreground'}`}>
-                <item.icon className="w-4 h-4 text-slate-50" />
-                <span className="text-slate-50">{item.label}</span>
-              </Link>)}
+          <div className="hidden md:flex items-center space-x-8">
+            <NavigationMenu>
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <Link to="/" className={`text-slate-50 hover:text-primary transition-all-300 ${location.pathname === '/' ? 'font-medium' : ''}`}>
+                    Home
+                  </Link>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="bg-transparent text-slate-50 hover:text-primary hover:bg-transparent focus:bg-transparent">
+                    Services
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent className="bg-white/90 backdrop-blur-md">
+                    <ul className="p-4 w-[200px] grid gap-2">
+                      {serviceItems.map(item => (
+                        <li key={item.path}>
+                          <Link 
+                            to={item.path} 
+                            className={`flex items-center space-x-2 p-2 rounded hover:bg-slate-100 transition-all-300 ${
+                              location.pathname === item.path ? 'text-primary font-medium' : 'text-slate-700'
+                            }`}
+                          >
+                            <item.icon className="w-4 h-4" />
+                            <span>{item.label}</span>
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <Link to="/contact" className="text-slate-50 hover:text-primary transition-all-300">
+                    Contact
+                  </Link>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
           </div>
         </div>
       </div>
